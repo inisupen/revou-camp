@@ -1,9 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>test</title>
-    </head>
-    <body>
-        <h1>starting mini course</h1>
-    </body>
+<html lang="en">
+<head>
+    <title>Mini Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Mini Course Practice</h1>
+        <p>Make A Mini Calculator</p>
+    </header>
+
+    <!-- Calculator Section -->
+    <div class="calculator">
+        <table>
+            <tr>
+                <th colspan="4"><input type="number" id="screen" class="screen" readonly></th>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn btn-ac" onclick="clearScreen()">AC</button></td>
+                <td><button class="btn btn-c" onclick="deleteLast()">C</button></td>
+                <td><button class="btn btn-operator" onclick="appendValue('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="appendValue('7')">7</button></td>
+                <td><button class="btn" onclick="appendValue('8')">8</button></td>
+                <td><button class="btn" onclick="appendValue('9')">9</button></td>
+                <td><button class="btn btn-operator" onclick="appendValue('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="appendValue('4')">4</button></td>
+                <td><button class="btn" onclick="appendValue('5')">5</button></td>
+                <td><button class="btn" onclick="appendValue('6')">6</button></td>
+                <td><button class="btn btn-operator" onclick="appendValue('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="appendValue('1')">1</button></td>
+                <td><button class="btn" onclick="appendValue('2')">2</button></td>
+                <td><button class="btn" onclick="appendValue('3')">3</button></td>
+                <td><button class="btn btn-operator" onclick="appendValue('-')">-</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn" onclick="appendValue('0')">0</button></td>
+                <td><button class="btn" onclick="appendValue('.')">.</button></td>
+                <td><button class="btn btn-equal" onclick="calculate()">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
